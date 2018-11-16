@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+       
+    <title>Train Times</title>
+</head>
+
+<body>
+
+    <body>
+        <div class="container">
+            <div class="jumbotron">
+                <h1 class="text-center">Train Times</h1>
+                
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+                    <!-- Current Trains -->
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><strong>Active Trains</strong></h3>
+                        </div>
+                        <div class="panel-body">
+                            <table class="table table-hover" id='trainTable'>
+                                <thead>
+                                    <tr>
+                                        <th>Train Name</th>
+                                        <th>Line</th>
+                                        <th>Destination</th>
+                                        <th>Frequency</th>
+                                        <th>Next Arrival</th>
+                                        <th>Minutes Away</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Add New Trains -->
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><strong>Input Train</strong></h3>
+                        </div>
+
+                        <div class="panel-body">
+                            <!-- Entry Form -->
+                            <form>
+                                <div class="form-group">
+                                    <label for="">Train Name</label>
+                                    <input type="text" class="form-control" id="trainNameInput">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="">Line</label>
+                                    <input type="text" class="form-control" id="lineInput">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="">Destination</label>
+                                    <input type="text" class="form-control" id="destinationInput">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="">First Train Time (HH:mm - military time)</label>
+                                    <input type="text" class="form-control" id="trainTimeInput">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="">Frequency (min)</label>
+                                    <input type="text" class="form-control" id="frequencyInput">
+                                </div>
+
+                                <button type="submit" class="btn btn-primary" id="addTrainBtn">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Javascript -->
+      
+
+
+      
+    </body>
+
+</html>
+
+<!-- Optional JavaScript -->
+
+
+<!-- Kurt, I moved all the javascript libraries here -->
+<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"></script>
+
+
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+    <script src="assets/app.js"></script>
+</body>
+
+</html>
