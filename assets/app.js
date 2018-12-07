@@ -11,7 +11,7 @@ $(document).ready(function(){
         };
 		firebase.initializeApp(config);
 		 
-		//Kurt, you forgot to use: firebase.database()
+		// use: firebase.database()
 		var trainData =  firebase.database();
 
 	// 2. Button for adding Trains
@@ -41,7 +41,7 @@ $(document).ready(function(){
 			frequency: frequencyInput,
 		}
 
-		//Kurt, you forgot to use: trainData.ref().push, you had without .ref()
+		// use: trainData.ref().push, you had without .ref()
 		// pushing trainInfo to Firebase
 		trainData.ref().push(newTrain);
 
@@ -79,7 +79,7 @@ $(document).ready(function(){
 		console.log(minutes);
 		console.log(nextTrainArrival);
 		console.log(moment().format("hh:mm A"));
-		console.log(nextTrainArrival);
+		console.log(nextTrainArrival);  
 		console.log(moment().format("X"));
 
 		// Append train info to table on page
